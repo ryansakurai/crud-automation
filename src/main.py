@@ -2,6 +2,9 @@ import time
 import pyautogui as gui
 
 gui.press("win")
+
+time.sleep(1)
+
 gui.write("edge")
 gui.press("enter")
 
