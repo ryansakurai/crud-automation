@@ -48,12 +48,11 @@ def register_product(table: pd.DataFrame, prod_line: int):
         if not pd.isna(value):
             gui.write(str(value))
 
-    for _ in range(2):
-        gui.press("tab")
-        gui.press("enter")
+    gui.press("tab")
+    gui.press("enter")
 
 def rollback():
-    for _ in range(9):
+    for _ in range(8):
         gui.hotkey("shift", "tab")
 
 
