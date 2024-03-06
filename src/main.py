@@ -8,6 +8,7 @@ CREDS = {
     "password": "strongpassword123"
 }
 TABLE_PATH = "resources/sample-products.csv"
+SLEEP_TIME = 2
 
 def main():
     open_browser()
@@ -22,17 +23,17 @@ def main():
 
 def open_browser():
     gui.press("win")
-    time.sleep(1)
+    time.sleep(SLEEP_TIME)
     gui.write("edge")
     gui.press("enter")
 
-    time.sleep(3)
+    time.sleep(SLEEP_TIME)
 
 def open_website():
     gui.write(WEBSITE_URL)
     gui.press("enter")
 
-    time.sleep(3)
+    time.sleep(SLEEP_TIME)
 
 def log_in():
     gui.press("tab")
@@ -42,7 +43,7 @@ def log_in():
     gui.press("tab")
     gui.press("enter")
 
-    time.sleep(3)
+    time.sleep(SLEEP_TIME)
 
 def register_product(table: pd.DataFrame, prod_line: int):
     for column in table.columns:
