@@ -3,7 +3,11 @@ import pyautogui as gui
 import pandas as pd
 
 WEBSITE_URL = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
-TABLE_PATH = "resources/produtos.csv"
+CREDS = {
+    "email": "mr.employee.man@gmail.com",
+    "password": "strongpassword123"
+}
+TABLE_PATH = "resources/sample-products.csv"
 
 def main():
     open_browser()
@@ -32,9 +36,9 @@ def open_website():
 
 def log_in():
     gui.press("tab")
-    gui.write("mr.employee.man@gmail.com")
+    gui.write(CREDS["email"])
     gui.press("tab")
-    gui.write("strongpassword123")
+    gui.write(CREDS["password"])
     gui.press("tab")
     gui.press("enter")
 
