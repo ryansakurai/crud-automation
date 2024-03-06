@@ -3,7 +3,7 @@ import pyautogui as gui
 import pandas as pd
 
 WEBSITE_URL = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
-TABLE_PATH = "../resources/produtos.csv"
+TABLE_PATH = "resources/produtos.csv"
 
 def main():
     open_browser()
