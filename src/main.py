@@ -2,13 +2,13 @@ import time
 import pyautogui as gui
 import pandas as pd
 
+SLEEP_TIME = 3
+TABLE_PATH = "resources/sample-products.csv"
 WEBSITE_URL = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
 CREDS = {
     "email": "mr.employee.man@gmail.com",
     "password": "strongpassword123"
 }
-TABLE_PATH = "resources/sample-products.csv"
-SLEEP_TIME = 2
 
 def main():
     open_browser()
@@ -57,6 +57,7 @@ def register_product(table: pd.DataFrame, prod_line: int):
     gui.press("enter")
 
 def rollback():
+    # it'd probably be faster using scroll and click
     for _ in range(8):
         gui.hotkey("shift", "tab")
 
