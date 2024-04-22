@@ -8,6 +8,8 @@
         function addProductToTable(event) {
             event.preventDefault();
 
+            const id = document.getElementById('id').value;
+            const brand = document.getElementById('brand').value;
             const type = document.getElementById('type').value;
             const category = document.getElementById('category').value;
             const unit_price = document.getElementById('unit_price').value;
@@ -17,11 +19,13 @@
             const table = document.getElementById('productTable');
 
             const row = table.insertRow(-1);
-            row.insertCell(0).innerHTML = type;
-            row.insertCell(1).innerHTML = category;
-            row.insertCell(2).innerHTML = unit_price;
-            row.insertCell(3).innerHTML = cost;
-            row.insertCell(4).innerHTML = extra;
+            row.insertCell(0).innerHTML = id;
+            row.insertCell(1).innerHTML = brand;
+            row.insertCell(2).innerHTML = type;
+            row.insertCell(3).innerHTML = category;
+            row.insertCell(4).innerHTML = unit_price;
+            row.insertCell(5).innerHTML = cost;
+            row.insertCell(6).innerHTML = extra;
         }
 
         function clearTable() {
@@ -35,21 +39,34 @@
 </head>
 <body>
     <form onsubmit="addProductToTable(event)">
+        <label for="code">Code:</label><br>
+        <input type="text" id="code" name="code"><br>
+
+        <label for="brand">Brand:</label><br>
+        <input type="text" id="brand" name="brand"><br>
+
         <label for="type">Type:</label><br>
         <input type="text" id="type" name="type"><br>
+
         <label for="category">Category:</label><br>
         <input type="text" id="category" name="category"><br>
+
         <label for="unit_price">Unit Price:</label><br>
         <input type="number" id="unit_price" name="unit_price" step="0.01"><br>
+
         <label for="cost">Cost:</label><br>
         <input type="number" id="cost" name="cost" step="0.01"><br>
+
         <label for="extra">Extra:</label><br>
         <input type="text" id="extra" name="extra"><br>
+
         <input type="submit" value="Register">
         <input type="button" value="Clear" onclick="clearTable()">
     </form>
     <table id="productTable">
         <tr>
+            <th>ID</th>
+            <th>Brand</th>
             <th>Type</th>
             <th>Category</th>
             <th>Unit Price</th>
