@@ -8,7 +8,7 @@
         function addProductToTable(event) {
             event.preventDefault();
 
-            const id = document.getElementById('id').value;
+            const code = document.getElementById('code').value;
             const brand = document.getElementById('brand').value;
             const type = document.getElementById('type').value;
             const category = document.getElementById('category').value;
@@ -19,7 +19,7 @@
             const table = document.getElementById('productTable');
 
             const row = table.insertRow(-1);
-            row.insertCell(0).innerHTML = id;
+            row.insertCell(0).innerHTML = code;
             row.insertCell(1).innerHTML = brand;
             row.insertCell(2).innerHTML = type;
             row.insertCell(3).innerHTML = category;
@@ -65,7 +65,7 @@
     </form>
     <table id="productTable">
         <tr>
-            <th>ID</th>
+            <th>Code</th>
             <th>Brand</th>
             <th>Type</th>
             <th>Category</th>
