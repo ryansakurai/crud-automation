@@ -4,7 +4,7 @@ import pandas as pd
 
 SLEEP_TIME = 3
 TABLE_PATH = "resources/sample-products.csv"
-WEBSITE_URL = "https://dlp.hashtagtreinamentos.com/python/intensivao/login"
+WEBSITE_URL = "file:///C:/Users/Sakurai/Downloads/login.html"
 CREDS = {
     "email": "mr.employee.man@gmail.com",
     "password": "strongpassword123"
