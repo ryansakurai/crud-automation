@@ -2,7 +2,7 @@
 
 An automation project that reads a CSV file and registers products in a system. The libraries used in this project were:
 - Pandas: for handling the CSV;
-- PyAutoGUI: for handling GUI manipulation;
+- PyAutoGUI: for handling GUI manipulation.
 
 ## 🗺️ Steps
 
