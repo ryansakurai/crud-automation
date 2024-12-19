@@ -1,14 +1,17 @@
 import time
 import pyautogui as gui
 import pandas as pd
+import os
 
 SLEEP_TIME = 3
-TABLE_PATH = "resources/sample-products.csv"
-WEBSITE_URL = "file:///C:/Users/Sakurai/Downloads/product-registering-auto/resources/login.html"
+BROWSER = "edge"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+app_path = os.path.join(current_dir, "../resources/dummy-app/login.html")
 CREDS = {
     "email": "mr.employee.man@gmail.com",
     "password": "strongpassword123"
 }
+TABLE_PATH = "resources/spreadsheets/sample-products.csv"
 
 def main():
     open_browser()
@@ -24,13 +27,13 @@ def main():
 def open_browser():
     gui.press("win")
     time.sleep(SLEEP_TIME)
-    gui.write("edge")
+    gui.write(BROWSER)
     gui.press("enter")
 
     time.sleep(SLEEP_TIME)
 
 def open_website():
-    gui.write(WEBSITE_URL)
+    gui.write(app_path)
     gui.press("enter")
 
     time.sleep(SLEEP_TIME)
